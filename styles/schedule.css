@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.25;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: white;
+}
+
+.header {
+    background-image: url('../images/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 143px 20px 142px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.content {
+    background-color: white;
+    padding: 20px 120px;
+    text-align: justify;
+}
+
+.schedule {
+    margin-bottom: 30px;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.schedule table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+    color: #000000;
+}
+
+.chair-moderator {
+    display: block;
+    margin-top: 10px; /* Adds a gap between the session theme and chair/moderator */
+    /* color: #555;      Softer color to differentiate from the session theme */
+}
+
+.schedule table td a,
+.schedule table td a:visited {
+    text-decoration: none;
+    color: #0000a0;
+}
+
+.schedule table td:first-child {
+    width: 200px; /* Fixed width for the left column */
+    /* white-space: nowrap; Prevents text wrapping */
+}
+
+.schedule table strong {
+    color: #003366;
+    font-size: 20px;
+}
+
+.section-space {
+    height: 0;
+}
+
+.break {
+    background-color: #ffffe0; /* Light yellow */
+}
+
+.speaker-details img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.speaker-details h2 {
+    color: #003366;
+    font-size: 28px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .navbar {
+        position: static;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: left;
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .title-section h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 20px 40px;
+    }
+
+    .schedule table td {
+        padding: 10px 10px; /* Decreased padding between columns */
+        font-size: 16px; /* Decreased font size for the table */
+    }
+
+    .schedule table td:first-child {
+        width: auto; /* Adjusts to screen size on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: left;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .title-section h1 {
+        font-size: 28px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .schedule table td {
+        padding: 10px 5px; /* Further decreased padding between columns */
+        font-size: 16px; /* Decreased font size for the table */
+    }
+
+    .chair-moderator {
+        margin-top: 8px; /* Slightly reduce the gap for very small screens if needed */
+    }
+
+    .schedule table td:first-child {
+        width: auto; /* Adjusts to screen size on smaller devices */
+    }
+}
