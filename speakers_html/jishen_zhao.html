@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jishen Zhao</title>
+    <link rel="stylesheet" href="../styles/schedule.css"> <!-- Link to the same CSS -->
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Overview</a></li>
+                <li><a href="../schedule.html">Schedule</a></li>
+                <li><a href="call_for_poster.html">Call for Posters</a></li>
+            </ul>
+        </nav>
+        <div class="title-section">
+            <h1>Speaker: Jishen Zhao</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="speaker-details">
+            <h2>Jishen Zhao (UCSD)</h2>
+            <img src="../images/jishen_zhao.jpg" alt="Jishen Zhao" style="width: 150px; float: left; margin-right: 20px;">
+            <h3>Towards Self-evolving LLM Multi-Agent System for Automated RTL Design and Verification</h3>
+            
+            <h3>Abstract</h3>
+            <p>The semiconductor industry faces increasing challenges in design automation as traditional ML-based tools operate in isolation across design phases, lacking intelligent coordination between specification input, RTL generation, and verification. Moreover, current methodologies are hindered by a critical verification bottleneck, where manual testbench generation consumes 60-70% of development time, and LLM-generated RTL achieves only 28.37% success rates for sequential circuits due to insufficient corner-case coverage. To address these challenges, we are developing an LLM-powered multi-agent system that integrates specification input, RTL design, testing, verification, validation, and optimization. This talk will present our recent progress on such agentic and training frameworks. MAGE, the first open-source and state-of-the-art multi-agent system for Verilog RTL generation, employs specialized agents with novel sampling and validation techniques that achieve 95.7% correctness on VerilogEval V2 benchmarks. Pro-V-R1, the first of its kind reasoning enhanced autonomous agent for testbench generation and hardware verification, with (i) a modular agentic system that couples LLM-based reasoning with programmatic tool use for RTL verification, (ii) a data construction pipeline leveraging existing RTL datasets to build simulation-validated, expert-level trajectories tailored for supervised fine-tuning (SFT) RTL verification agents and (iii) an efficient GRPO reinforcement learning algorithm using verification-specific rewards derived from program-tool feedback to optimize the end-to-end verification workflow. I will also share insights gained from our studies on LLM's capabilities and multi-agent system-based learning in addressing complex real-world challenges.</p>
+
+            <h3>Bio</h3>
+            <p>Jishen Zhao is a Professor in the Computer Science and Engineering Department at University of California, San Diego. Her research is at the boundary of computer systems and machine learning, particularly on memory systems, machine learning and systems co-design, and reliability. Before joining academia, she was a research scientist at HP Labs.</p>
+        </section>
+    </main>
+</body>
+
+</html>
