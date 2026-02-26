@@ -4,24 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Andersen</title>
-    <link rel="stylesheet" href="../styles/schedule.css"> <!-- Link to the same CSS -->
+    <title>Thomas Andersen &mdash; Agent4Chip Workshop 2026</title>
+    <link rel="stylesheet" href="../styles/shared.css">
+    <link rel="stylesheet" href="../styles/schedule.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="../index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Overview</a></li>
-                <li><a href="../schedule.html">Schedule</a></li>
-                <li><a href="call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../schedule.html" class="active">Schedule</a></li>
+                <li><a href="../call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="../attending.html">Attending</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header subpage">
         <div class="title-section">
             <h1>Speaker: Thomas Andersen</h1>
         </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
         <section class="speaker-details">
             <h2>Thomas Andersen (Synopsys)</h2>
@@ -29,9 +40,36 @@
             <h3>Is Agentic AI the Future of Chip Design Automation?</h3>
 
             <h3>Bio</h3>
-            <p>Dr. Andersen heads the artificial intelligence and machine learning group at Synopsys, where he focuses on developing new technologies in the AI and ML space to automate the future of chip design. He has more than 20 years of experience in the semiconductor and EDA industry. Dr. Andersen started his career at IBM’s TJ Watson Research Center in Yorktown Heights, New York, followed by managing synthesis/place-and-route engineering at Magma Design Automation and Synopsys. He holds a Master’s degree from the University of Stuttgart and a Ph.D. in Computer Engineering from the University of Kaiserslautern in Germany.</p>
+            <p>Dr. Andersen heads the artificial intelligence and machine learning group at Synopsys, where he focuses on developing new technologies in the AI and ML space to automate the future of chip design. He has more than 20 years of experience in the semiconductor and EDA industry. Dr. Andersen started his career at IBM's TJ Watson Research Center in Yorktown Heights, New York, followed by managing synthesis/place-and-route engineering at Magma Design Automation and Synopsys. He holds a Master's degree from the University of Stuttgart and a Ph.D. in Computer Engineering from the University of Kaiserslautern in Germany.</p>
         </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

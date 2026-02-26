@@ -4,26 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents for Chip Design Automation</title>
+    <title>NSF Workshop on Agents for Chip Design Automation</title>
+    <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Overview</a></li>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Overview</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="call_for_poster.html">Call for Posters</a></li>
+                <li><a href="accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="attending.html">Attending</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header">
         <div class="title-section">
             <h2>NSF Workshop on Agents for Chip Design Automation</h2>
-            <h3>UCLA Engineer VI -- Mong Auditorium</h3>
+            <h3>UCLA Engineer VI &mdash; Mong Auditorium</h3>
             <h3>March 13, 2026</h3>
         </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
         <h4>Overview</h4>
         <section class="introduction">
@@ -32,28 +43,20 @@
             <p>Link to the AI for Electronic Design Automation Workshop (2024) website: <a href="https://ai4eda-workshop.github.io/" target="_blank">https://ai4eda-workshop.github.io/</a></p>
         </section>
 
+        <h4>Attending</h4>
         <section class="important-dates">
-            <h4>Attending</h4>
             <ul>
-            <li>Registration: please kindly register through <strong><a href="https://sa.ucla.edu/forms/p/pEcrs" target="_blank">this registration link</a>.</strong></li>
-            <li>Registration fee: Students: $50, Non-Students: $100, Speakers and Panelists: Waived. You will receive a confirmation email upon successful registration, with instructions of fee payment.</li>
-            <li>Venue: UCLA Computer Science Department (Engineer VI) -- Mong Auditorium</li>
+                <li>Registration is required: please register through the link below.<br>
+                    <a href="https://sa.ucla.edu/forms/p/pEcrs" target="_blank" class="register-btn" style="margin-top: 10px; margin-left: 0;">Register Now</a>
+                </li>
+                <li style="margin-top: 12px;">Registration fee: Students: $50, Non-Students: $100, Speakers and Panelists: Waived. You will receive a confirmation email upon successful registration, with instructions for fee payment.</li>
+                <li>Discount code for the UCLA Luskin Hotel: You will see a discount code after registration.</li>
+                <li><a href="attending.html">Detailed attending information &rarr;</a></li>
             </ul>
         </section>
 
-        <!-- <section class="important-dates">
-            <h4>Important Dates</h4>
-            <ul>
-                <li>November 4, 2024, 11:59 PM AoE: deadline for submitting poster proposal</li>
-                <li>November 10, 2024 (or earlier, as soon as we finish reviewing): decision notification</li>
-                <li>November 11, 2024, 11:59 PM AoE: late deadline for submitting poster proposal (we will review quickly after it)</li>
-                <li>November 30, 2024 (or whenever the capacity is met): registration deadline</li>
-                <li>December 10, 2024: the event</li>
-            </ul>
-        </section> -->
-
+        <h4>Keynote</h4>
         <section class="invited-speakers">
-            <h4>Keynote</h4>
             <div class="speakers-grid">
                 <div class="speaker">
                     <img src="images/parthasarathy_ranganathan.jpg" alt="Parthasarathy Ranganathan">
@@ -63,13 +66,14 @@
             </div>
         </section>
 
+        <h4>Speakers and Panelists</h4>
         <section class="invited-speakers">
-            <h4>Speakers and Panelists</h4>
             <div class="speakers-grid">
                 <div class="speaker">
                     <img src="images/thomas_andersen.jpg" alt="Thomas Andersen">
                     <h5><a href="https://www.linkedin.com/in/kutzsche/" target="_blank">Thomas Andersen</a></h5>
                     <p>Synopsys</p>
+                    <p class="speaker-talk"><a href="speakers_html/thomas_andersen.html" target="_blank">Is Agentic AI the Future of Chip Design Automation?</a></p>
                 </div>
                 <div class="speaker">
                     <img src="images/anna_goldie.jpg" alt="Anna Goldie">
@@ -80,16 +84,19 @@
                     <img src="images/vikas_gupta.jpg" alt="Vikas Gupta">
                     <h5><a href="https://www.linkedin.com/in/vikas-gupta-5389834/" target="_blank">Vikas Gupta</a></h5>
                     <p>Samsung</p>
+                    <p class="speaker-talk"><a href="speakers_html/vikas_gupta.html" target="_blank">Exploring AI-Driven Approaches for Scalable ASIC Design and Implementation</a></p>
                 </div>
                 <div class="speaker">
                     <img src="images/kartik_hegde.jpg" alt="Kartik Hegde">
                     <h5><a href="https://www.kartikhegde.net/" target="_blank">Kartik Hegde</a></h5>
                     <p>Cadence</p>
+                    <p class="speaker-talk"><a href="speakers_html/kartik_hegde.html" target="_blank">LLMs in Production With Chip Teams: Opportunities, Challenges, and Lessons Learned</a></p>
                 </div>
                 <div class="speaker">
                     <img src="images/mark_ho.jpeg" alt="Chia-Tung (Mark) Ho">
                     <h5><a href="https://research.nvidia.com/person/chia-tung-mark-ho" target="_blank">Chia-Tung (Mark) Ho</a></h5>
                     <p>Nvidia</p>
+                    <p class="speaker-talk"><a href="speakers_html/mark_ho.html" target="_blank">Learning Agentic AI for Hardware Design Automation: From Hand-Crafted Workflows to Trainable, Self-Improving Agents</a></p>
                 </div>
                 <div class="speaker">
                     <img src="images/azalia_mirhoseini.jpg" alt="Azalia Mirhoseini">
@@ -125,12 +132,13 @@
                     <img src="images/jishen_zhao.jpg" alt="Jishen Zhao">
                     <h5><a href="https://cseweb.ucsd.edu/~jzhao/" target="_blank">Jishen Zhao</a></h5>
                     <p>UCSD</p>
+                    <p class="speaker-talk"><a href="speakers_html/jishen_zhao.html" target="_blank">Towards Self-evolving LLM Multi-Agent System for Automated RTL Design and Verification</a></p>
                 </div>
             </div>
         </section>
 
+        <h4>Organizers</h4>
         <section class="organizers">
-            <h4>Organizers</h4>
             <div class="organizers-grid">
                 <div class="organizer">
                     <img src="images/jason_cong.jpg" alt="Jason Cong">
@@ -150,8 +158,8 @@
             </div>
         </section>
 
-        <!-- <section class="student-organizers">
-            <h5 style="color: #003366; font-size: 24px; margin-top: 20px; margin-bottom: 20px;">Student Organizer</h5>
+        <section class="student-organizers">
+            <h5 style="color: #003366; font-size: 22px; margin-top: 24px; margin-bottom: 16px;">Student Organizer</h5>
             <div class="organizers-grid">
                 <div class="organizer">
                     <img src="images/weikai_li.jpg" alt="Weikai Li">
@@ -161,21 +169,49 @@
             </div>
         </section>
 
+        <h4>Program Committee</h4>
         <section class="program-committee">
-            <h4>Program Committee</h4>
-            <ul>
-                <li>Chenhui Deng</li>
-                <li>Zijian Ding</li>
-                <li>Xiaohan Gao</li>
-                <li>You Li</li>
-                <li>Zongyue Qin</li>
-                <li>Chengyue Wang</li>
-                <li>Jade Xu</li>
-                <li>Jiaqi Yin</li>
-                <li>Hejia Zhang</li>
-            </ul>
-        </section> -->
+            <div class="pc-grid">
+                <span class="pc-tag">Chenhui Deng</span>
+                <span class="pc-tag">Zijian Ding</span>
+                <span class="pc-tag">Xiaohan Gao</span>
+                <span class="pc-tag">Weikai Li</span>
+                <span class="pc-tag">You Li</span>
+                <span class="pc-tag">Zongyue Qin</span>
+                <span class="pc-tag">Chengyue Wang</span>
+                <span class="pc-tag">Jade Xu</span>
+                <span class="pc-tag">Jiaqi Yin</span>
+                <span class="pc-tag">Hejia Zhang</span>
+            </div>
+        </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

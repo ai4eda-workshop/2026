@@ -4,34 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cunxi Yu</title>
-    <link rel="stylesheet" href="../styles/schedule.css"> <!-- Link to the same CSS -->
+    <title>Cunxi Yu &mdash; Agent4Chip Workshop 2026</title>
+    <link rel="stylesheet" href="../styles/shared.css">
+    <link rel="stylesheet" href="../styles/schedule.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="../index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Overview</a></li>
-                <li><a href="../schedule.html">Schedule</a></li>
-                <li><a href="call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../schedule.html" class="active">Schedule</a></li>
+                <li><a href="../call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="../attending.html">Attending</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header subpage">
         <div class="title-section">
             <h1>Speaker: Cunxi Yu</h1>
         </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
         <section class="speaker-details">
             <h2>Cunxi Yu (University of Maryland, College Park)</h2>
             <img src="../images/cunxi_yu.jpg" alt="Cunxi Yu" style="width: 150px; float: left; margin-right: 20px;">
-            <h3>Title placeholder</h3>
+            <h3>Title (Coming Soon)</h3>
 
             <h3>Bio</h3>
             <p>Prof. Cunxi Yu is an Assistant Professor at the University of Maryland, College Park. His research focuses on novel algorithms, systems, and hardware designs for computing and artificial intelligence. His work has been recognized with a Best Paper Award at DAC (2023), a Best Paper Award at ASPLOS (2025), Best Paper Nominations at DAC, ICCAD, and ASP-DAC, as well as the NVIDIA Academic Research Award and the NSF CAREER Award. He also holds a Visiting Professor position at NVIDIA Research. Prof. Yu earned his Ph.D. from the University of Massachusetts Amherst in 2017.</p>
         </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

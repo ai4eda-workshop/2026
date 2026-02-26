@@ -1,0 +1,75 @@
+/* ============================================================
+   ATTENDING PAGE STYLES
+   (shared layout & navbar styles are in shared.css)
+   ============================================================ */
+
+/* Scope link colors to content area to avoid bleeding into the navbar */
+.content a,
+.content a:visited {
+    color: #336699;
+}
+
+.content a:hover {
+    color: #003366;
+}
+
+/* -------- Attending info sections -------- */
+
+.attending-section ul {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+.attending-section ul li {
+    margin-bottom: 10px;
+}
+
+.venue-address {
+    color: #555;
+    font-style: italic;
+    margin: 6px 0 22px;
+    font-size: 17px;
+}
+
+/* -------- Registration highlight box -------- */
+
+.registration-box {
+    background-color: #f0f5fb;
+    border-left: 4px solid #003366;
+    border-radius: 0 6px 6px 0;
+    padding: 20px 24px;
+    margin: 10px 0 24px;
+}
+
+.registration-box p {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.registration-box p:first-child {
+    margin-top: 0;
+}
+
+.registration-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   RESPONSIVE — ATTENDING PAGE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .attending-section ul {
+        padding-left: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .attending-section ul {
+        padding-left: 14px;
+    }
+
+    .registration-box {
+        padding: 16px 16px;
+    }
+}

@@ -1,78 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.25;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: white;
-}
+/* ============================================================
+   INDEX PAGE — SPEAKERS, ORGANIZERS, SPONSORS
+   (shared layout & navbar styles are in shared.css)
+   ============================================================ */
 
-.header {
-    background-image: url('../images/background_image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 115px 20px 95px 20px;
-    text-align: center;
-    position: relative;
-}
-
-.navbar {
-    position: absolute;
-    top: 20px;
-    right: 120px;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.title-section h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.title-section h2 {
-    margin: 0;
-    font-size: 36px;
-    margin-top: 10px;
-}
-
-.title-section h3 {
-    margin: 0;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.content {
-    background-color: white;
-    padding: 10px 120px;
-    margin-top: 0px;
-    text-align: justify;
-}
-
-h4 {
-    color: #003366;
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.introduction ul {
-    padding-left: 25px;
-}
+/* -------- Section link colors -------- */
 
 .introduction a,
 .introduction a:hover,
@@ -83,24 +14,20 @@ h4 {
     color: #336699;
 }
 
+.introduction ul,
 .important-dates ul {
     padding-left: 25px;
+    line-height: 1.8;
 }
 
-.registration {
-    margin-bottom: 10px;
-}
+/* -------- Speakers grid -------- */
 
-.speakers-grid {
-    display: grid;
-    gap: 0px 30px;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for invited speakers */
-}
-
+.speakers-grid,
 .organizers-grid {
     display: grid;
-    gap: 0px 30px;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for organizers */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 40px;
+    margin-bottom: 10px;
 }
 
 .speaker,
@@ -108,24 +35,24 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .speaker img,
 .organizer img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    border-radius: 10px;
+    display: block;
 }
 
 .speaker h5,
 .organizer h5 {
-    font-size: 20px;
-    margin: 10px 0 -10px 0;
+    font-size: 18px;
+    margin: 9px 0 2px 0;
     text-align: center;
+    line-height: 1.3;
 }
 
 .speaker a,
@@ -136,25 +63,79 @@ h4 {
     color: #336699;
 }
 
+.speaker a:hover,
+.organizer a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
 .speaker p,
 .organizer p {
     font-size: 18px;
     color: #666;
-    text-align: center;
+    margin: 2px 0 0 0;
 }
 
-.section-divider {
-    border: 0;
-    height: 2px;
-    background-color: #ddd;
-    margin: 20px 0 0 0;
+/* -------- Talk title shown under speaker affiliation -------- */
+
+.speaker-talk {
+    font-size: 13px;
+    color: #555;
+    margin: 4px 0 0 0;
+    line-height: 1.35;
+    font-style: italic;
 }
+
+.speaker-talk a,
+.speaker-talk a:visited {
+    color: #336699;
+    text-decoration: none;
+}
+
+.speaker-talk a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* -------- Student organizer section heading -------- */
+
+.student-organizers > h5 {
+    color: #003366;
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* -------- Program committee — tag/chip grid -------- */
+
+.pc-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.pc-tag {
+    display: inline-block;
+    background-color: #f0f5fb;
+    border: 1px solid #c8d8ea;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 18px;
+    color: #003366;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+/* -------- Sponsors -------- */
 
 .sponsor-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 20px 0 40px;
 }
 
 .sponsor-row {
@@ -162,123 +143,81 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .sponsor-logo-large {
-    max-width: 400px;
+    max-width: 360px;
     height: auto;
 }
 
 .sponsor-logo {
     height: 65px;
     width: auto;
-    margin: 20px 30px;
+    margin: 16px 24px;
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding: 60px 20px;
-        text-align: center;
-    }
+/* ============================================================
+   RESPONSIVE — INDEX PAGE
+   ============================================================ */
 
-    .navbar {
-        position: static;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: left;
-        gap: 15px;
-    }
-
-    .navbar ul li a {
-        font-size: 16px;
-    }
-
-    .title-section h1 {
-        font-size: 18px;
-    }
-
-    .title-section h2 {
-        font-size: 32px;
-    }
-
-    .title-section h3 {
-        font-size: 18px;
-    }
-
-    h4 {
-        color: #003366;
-        font-size: 24px;
-    }
-
-    .content {
-        padding: 10px 40px;
-    }
-
+@media (max-width: 900px) {
     .speakers-grid,
     .organizers-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 5px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .speakers-grid,
+    .organizers-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px 14px;
+    }
+
+    .pc-tag {
+        font-size: 16px;
+        padding: 5px 14px;
     }
 
     .sponsor-logo-large {
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .sponsor-logo {
         height: 50px;
-        margin: 20px;
+        margin: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .header {
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: left;
-        gap: 5px 10px;
-    }
-
-    .navbar ul li a {
-        font-size: 16px;
-    }
-
-    .title-section h1 {
-        font-size: 18px;
-    }
-
-    .title-section h2 {
-        font-size: 28px;
-    }
-
-    .title-section h3 {
-        font-size: 18px;
-    }
-
-    h4 {
-        color: #003366;
-        font-size: 20px;
-    }
-
-    .content {
-        padding: 10px 20px;
-    }
-
     .speakers-grid,
     .organizers-grid {
-        gap: 5px 15px;
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 10px;
+    }
+
+    .speaker h5,
+    .organizer h5 {
+        font-size: 14px;
+    }
+
+    .speaker p,
+    .organizer p {
+        font-size: 13px;
+    }
+
+    .speaker-talk {
+        font-size: 11px;
+    }
+
+    .pc-tag {
+        font-size: 15px;
+        padding: 5px 12px;
     }
 
     .sponsor-logo-large {
-        max-width: 250px;
+        max-width: 220px;
     }
 
     .sponsor-logo {

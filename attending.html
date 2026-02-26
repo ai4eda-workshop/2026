@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attending &mdash; Agent4Chip Workshop 2026</title>
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/attending.css">
+</head>
+
+<body>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="call_for_poster.html">Call for Posters</a></li>
+                <li><a href="accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="attending.html" class="active">Attending</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header subpage">
+        <div class="title-section">
+            <h1>Attending</h1>
+            <h3>UCLA Engineer VI &mdash; Mong Auditorium &nbsp;&bull;&nbsp; March 13, 2026</h3>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <h4>Registration</h4>
+        <section class="attending-section">
+            <div class="registration-box">
+                <p>Registration is required to attend the workshop. Please register using the button below.</p>
+                <p><a href="https://sa.ucla.edu/forms/p/pEcrs" target="_blank" class="register-btn">Register Now</a></p>
+                <p style="margin-top: 14px;"><strong>Registration Fees:</strong></p>
+                <p>&bull; Students: $50</p>
+                <p>&bull; Non-students: $100</p>
+                <p>&bull; Speakers and panelists: Waived</p>
+                <p>You will receive a confirmation email upon successful registration, with instructions for fee payment.</p>
+            </div>
+        </section>
+
+        <h4>Venue</h4>
+        <section class="attending-section">
+            <p><strong>UCLA Computer Science Department &mdash; Engineering VI (Mong Auditorium)</strong></p>
+            <p class="venue-address">404 Westwood Plaza, Los Angeles, CA 90095</p>
+            <div class="map-container">
+                <iframe
+                    src="https://maps.google.com/maps?output=embed&q=Engineering+VI+UCLA+Los+Angeles+CA+90095&z=16"
+                    width="100%"
+                    height="360"
+                    style="border: 0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="UCLA Engineering VI — Mong Auditorium">
+                </iframe>
+            </div>
+        </section>
+
+        <h4>Getting There</h4>
+        <section class="attending-section">
+            <ul>
+                <li><strong>By car:</strong> UCLA is located at 405 Hilgard Ave, Los Angeles, CA 90095. Engineering VI is in the center of campus. Visitor parking is available in several structures on campus.</li>
+                <li><strong>Parking:</strong> See <a href="https://transportation.ucla.edu/campus-parking/visitors" target="_blank">UCLA visitor parking information</a> for rates and locations. We recommend Parking Structure 8 (near Engineering VI).</li>
+                <li><strong>By bus:</strong> There is a bus stop in front of Engineering VI, with multiple bus lines. Please see <a href="https://transportation.ucla.edu/getting-to-ucla/public-transit" target="_blank">UCLA public transit information</a>.</li>
+            </ul>
+        </section>
+
+        <h4>Accommodations</h4>
+        <section class="attending-section">
+            <ul>
+                <li>The <a href="https://live-luskin-conference-center.pantheonsite.io/" target="_blank">UCLA Luskin Conference Center</a> is located on campus and provides convenient accommodation.</li>
+                <li><strong>Discount code for Luskin:</strong> You will see a discount code for Luskin after registration.</li>
+                <li>Several other hotels are available in the Westwood and West LA area near campus.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

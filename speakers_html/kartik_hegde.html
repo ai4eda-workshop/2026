@@ -4,24 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Hegde</title>
-    <link rel="stylesheet" href="../styles/schedule.css"> <!-- Link to the same CSS -->
+    <title>Kartik Hegde &mdash; Agent4Chip Workshop 2026</title>
+    <link rel="stylesheet" href="../styles/shared.css">
+    <link rel="stylesheet" href="../styles/schedule.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="../index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Overview</a></li>
-                <li><a href="../schedule.html">Schedule</a></li>
-                <li><a href="call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../schedule.html" class="active">Schedule</a></li>
+                <li><a href="../call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="../attending.html">Attending</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header subpage">
         <div class="title-section">
             <h1>Speaker: Kartik Hegde</h1>
         </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
         <section class="speaker-details">
             <h2>Kartik Hegde (Cadence)</h2>
@@ -30,10 +41,37 @@
 
             <h3>Abstract</h3>
             <p>The growing complexity and specialization of modern chips necessitate a fundamental shift in how we approach design and verification. Large Language Models (LLMs) present a timely and transformative opportunity to address key bottlenecks in chip design flows.</p>
-            <p>This talk will explore how the advanced natural language processing capabilities of LLMs can streamline design and verification processes, from automated verification plan generation to intelligent debug assistance—supported by real-world case studies. We will share insights from fine-tuning LLMs for DV-specific tasks, demonstrating measurable improvements in accuracy of LLMs on real-world examples.</p>
+            <p>This talk will explore how the advanced natural language processing capabilities of LLMs can streamline design and verification processes, from automated verification plan generation to intelligent debug assistance&mdash;supported by real-world case studies. We will share insights from fine-tuning LLMs for DV-specific tasks, demonstrating measurable improvements in accuracy of LLMs on real-world examples.</p>
             <p>Beyond the opportunities, we will discuss the challenges of deploying generative AI solutions in production chip design teams, including infrastructure constraints, reliability concerns, and building user trust. By integrating generative AI with modern methodologies and software stacks, this talk will outline how LLMs can accelerate chip design cycles and significantly reduce time to market for next-generation chips.</p>
         </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

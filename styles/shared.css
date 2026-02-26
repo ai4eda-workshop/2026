@@ -1,0 +1,402 @@
+/* ============================================================
+   SHARED STYLES — NSF Workshop on Agents for Chip Design
+   ============================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    padding-top: 60px; /* offset for fixed navbar */
+}
+
+/* ============================================================
+   STICKY NAVBAR
+   ============================================================ */
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #003366;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Use high-specificity selectors to prevent page-level `a` rules from bleeding in */
+.sticky-nav .nav-brand,
+.sticky-nav .nav-brand:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.sticky-nav .nav-brand:hover {
+    color: #FFB300;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.nav-links li a,
+.nav-links li a:visited {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #FFB300;
+    border-bottom-color: #FFB300;
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================================
+   HERO HEADER / BANNER
+   ============================================================ */
+
+.header {
+    background-image: url('../images/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 20, 50, 0.52);
+    pointer-events: none;
+}
+
+.title-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.title-section h1 {
+    margin: 0 0 16px 0;
+    font-size: 40px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-section h2 {
+    margin: 0 0 16px 0;
+    font-size: 36px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-section h3 {
+    margin: 8px 0 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    opacity: 0.92;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Subpage header (shorter padding) */
+.header.subpage .title-section {
+    padding: 52px 40px;
+}
+
+/* ============================================================
+   PAGE CONTENT WRAPPER
+   ============================================================ */
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 40px 40px;
+    text-align: justify;
+}
+
+/* Eliminate extra top gap on first element (and its first child) after the banner */
+.content > *:first-child,
+.content > *:first-child > *:first-child {
+    margin-top: 0;
+}
+
+h4 {
+    color: #003366;
+    font-size: 26px;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dde6f0;
+}
+
+/* ============================================================
+   REGISTER BUTTON
+   ============================================================ */
+
+.register-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff !important;
+    padding: 9px 22px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 4px;
+    box-shadow: 0 2px 6px rgba(0, 51, 102, 0.3);
+}
+
+.register-btn:hover {
+    background-color: #0050a0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.4);
+}
+
+.register-btn:visited {
+    color: #fff !important;
+}
+
+/* ============================================================
+   MAP CONTAINER
+   ============================================================ */
+
+.map-container {
+    margin: 20px 10% 10px;  /* 10% inset on each side — narrower than text */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
+/* ============================================================
+   FOOTER  (simplified: name + location + contact only)
+   ============================================================ */
+
+.site-footer {
+    background-color: #001e3c;
+    color: #b0c4d8;
+    margin-top: 0;
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-info .footer-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.footer-info p,
+.footer-contact p {
+    font-size: 13px;
+    color: #b0c4d8;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-contact a,
+.footer-contact a:visited {
+    color: #88aac8;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   RESPONSIVE SHARED STYLES
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* Show hamburger, hide nav links */
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #002244;
+        padding: 8px 0;
+        gap: 0;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 14px 24px;
+        border-bottom: none;
+        font-size: 15px;
+    }
+
+    .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.07);
+        color: #FFB300;
+        border-bottom: none;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    /* Header */
+    .title-section {
+        padding: 52px 24px;
+    }
+
+    .title-section h2 {
+        font-size: 26px;
+    }
+
+    .title-section h1 {
+        font-size: 28px;
+    }
+
+    .title-section h3 {
+        font-size: 17px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    .content {
+        padding: 18px 24px 32px;
+        text-align: left;
+    }
+
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 24px 24px;
+    }
+
+    .map-container {
+        margin: 16px 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-section {
+        padding: 36px 16px;
+    }
+
+    .title-section h2 {
+        font-size: 21px;
+    }
+
+    .title-section h1 {
+        font-size: 23px;
+    }
+
+    .title-section h3 {
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 12px 16px 24px;
+    }
+
+    .footer-inner {
+        padding: 20px 16px;
+    }
+}
