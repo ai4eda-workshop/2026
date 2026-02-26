@@ -91,13 +91,6 @@ h3 {
     height: 14px;
 }
 
-.chair-moderator {
-    display: block;
-    margin-top: 8px;
-    color: #555;
-    font-size: 16px;
-}
-
 /* Invited talks list (single-column table) */
 .schedule table .presentation td {
     padding: 13px 20px;
@@ -108,9 +101,11 @@ h3 {
    ============================================================ */
 
 @media (max-width: 768px) {
-    .schedule table td {
+    /* Include .presentation td to override its higher-specificity base padding rule */
+    .schedule table td,
+    .schedule table .presentation td {
         padding: 10px 12px;
-        font-size: 15px;
+        /* No font-size reduction — keep 18px to match body text */
     }
 
     .schedule table td:first-child:not(:last-child) {
@@ -127,13 +122,15 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    .schedule table td {
+    /* Include .presentation td to override its higher-specificity base padding rule */
+    .schedule table td,
+    .schedule table .presentation td {
         padding: 8px 8px;
-        font-size: 14px;
+        font-size: 16px;  /* matches reduced body font-size at 480px */
     }
 
     .schedule table td:first-child:not(:last-child) {
         width: auto;
-        font-size: 13px;
+        font-size: 14px;  /* time column slightly smaller */
     }
 }

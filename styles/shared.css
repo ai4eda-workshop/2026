@@ -372,6 +372,10 @@ h4 {
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 16px;  /* slightly smaller body text on phones; speaker names and schedule match this */
+    }
+
     .title-section {
         padding: 36px 16px;
     }

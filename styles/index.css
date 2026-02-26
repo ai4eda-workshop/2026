@@ -79,7 +79,6 @@
 /* -------- Talk title shown under speaker affiliation -------- */
 
 .speaker-talk {
-    font-size: 13px;
     color: #555;
     margin: 4px 0 0 0;
     line-height: 1.35;
@@ -199,20 +198,20 @@
 
     .speaker h5,
     .organizer h5 {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .speaker p,
     .organizer p {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .speaker-talk {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .pc-tag {
-        font-size: 15px;
+        font-size: 16px;
         padding: 5px 12px;
     }
 
