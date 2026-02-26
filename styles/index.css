@@ -106,35 +106,12 @@
     font-weight: bold;
 }
 
-/* -------- Program committee — tag/chip grid -------- */
-
-.pc-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 12px;
-    margin-top: 6px;
-    text-align: left;
-}
-
-.pc-tag {
-    display: inline-block;
-    background-color: #f0f5fb;
-    border: 1px solid #c8d8ea;
-    border-radius: 20px;
-    padding: 6px 18px;
-    font-size: 18px;
-    color: #003366;
-    white-space: nowrap;
-    line-height: 1.4;
-}
-
 /* -------- Sponsors -------- */
 
 .sponsor-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0 40px;
 }
 
 .sponsor-row {
@@ -145,15 +122,16 @@
     gap: 10px;
 }
 
-.sponsor-logo-large {
-    max-width: 360px;
-    height: auto;
-}
-
 .sponsor-logo {
-    height: 65px;
+    height: 100px;
     width: auto;
     margin: 16px 24px;
+}
+
+.sponsor-thanks {
+    text-align: center;
+    color: #555;
+    margin-bottom: 4px;
 }
 
 /* ============================================================
@@ -174,18 +152,9 @@
         gap: 14px 14px;
     }
 
-    .pc-tag {
-        font-size: 16px;
-        padding: 5px 14px;
-    }
-
-    .sponsor-logo-large {
-        max-width: 280px;
-    }
-
     .sponsor-logo {
-        height: 50px;
-        margin: 14px;
+        height: 60px;
+        margin: 5px;
     }
 }
 
@@ -210,17 +179,7 @@
         font-size: 14px;
     }
 
-    .pc-tag {
-        font-size: 16px;
-        padding: 5px 12px;
-    }
-
-    .sponsor-logo-large {
-        max-width: 220px;
-    }
-
     .sponsor-logo {
         height: 40px;
-        margin: 10px;
     }
 }
