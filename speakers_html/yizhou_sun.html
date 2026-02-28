@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yizhou Sun &mdash; Agent4Chip Workshop 2026</title>
+    <link rel="stylesheet" href="../styles/shared.css">
+    <link rel="stylesheet" href="../styles/schedule.css">
+</head>
+
+<body>
+    <!-- ===== STICKY NAVBAR ===== -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a class="nav-brand" href="../index.html">Agent4Chip 2026</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Overview</a></li>
+                <li><a href="../schedule.html">Schedule</a></li>
+                <li><a href="../call_for_poster.html">Call for Posters</a></li>
+                <li><a href="../accepted_papers.html">Accepted Posters</a></li>
+                <li><a href="../attending.html">Attending</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO HEADER ===== -->
+    <header class="header subpage">
+        <div class="title-section">
+            <h1>Speaker: Yizhou Sun</h1>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+        <section class="speaker-details">
+            <h2>Yizhou Sun (UCLA)</h2>
+            <img src="../images/yizhou_sun.jpg" alt="Yizhou Sun" style="width: 150px; float: left; margin-right: 20px;">
+            <h3>ARLArena: A Unified Framework for Stable Agentic Reinforcement Learning</h3>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-title">NSF Workshop on Agents for Chip Design Automation</p>
+                <p>UCLA Engineer VI &mdash; Mong Auditorium &bull; March 13, 2026 &bull; Los Angeles, CA</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:agent4chip@gmail.com">agent4chip@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== HAMBURGER SCRIPT ===== -->
+    <script>
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -64,12 +64,10 @@ h3 {
     width: 200px;
     white-space: nowrap;
     color: #555;
-    font-size: 16px;
 }
 
 .schedule table strong {
     color: #003366;
-    font-size: 18px;
 }
 
 .schedule table td a,
@@ -83,17 +81,25 @@ h3 {
     color: #003366;
 }
 
-.break {
-    background-color: #f7f9e8;
-}
 
 .section-space {
-    height: 14px;
+    height: 24px;
 }
 
 /* Invited talks list (single-column table) */
 .schedule table .presentation td {
     padding: 13px 20px;
+}
+
+/* Individual talk sub-rows within invited-talk blocks */
+.talk-item td {
+    padding: 7px 20px 7px 46px;
+    color: #333;
+    background-color: #f5f8ff;
+}
+
+.panelists {
+    color: #666;
 }
 
 /* ============================================================
@@ -126,11 +132,9 @@ h3 {
     .schedule table td,
     .schedule table .presentation td {
         padding: 8px 8px;
-        font-size: 16px;  /* matches reduced body font-size at 480px */
     }
 
     .schedule table td:first-child:not(:last-child) {
         width: auto;
-        font-size: 14px;  /* time column slightly smaller */
     }
 }
