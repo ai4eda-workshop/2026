@@ -15,6 +15,9 @@ body {
     color: #333;
     background-color: #fff;
     padding-top: 60px; /* offset for fixed navbar */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ============================================================
@@ -169,6 +172,7 @@ body {
     margin: 0 auto;
     padding: 28px 40px 40px;
     text-align: justify;
+    flex: 1;
 }
 
 /* Eliminate extra top gap on first element (and its first child) after the banner */
