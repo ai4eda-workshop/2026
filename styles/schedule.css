@@ -81,6 +81,15 @@ h3 {
     color: #003366;
 }
 
+.slides-link,
+.slides-link:visited {
+    color: #0d9488 !important;
+}
+
+.slides-link:hover {
+    color: #0f766e !important;
+}
+
 
 .section-space {
     height: 24px;
